@@ -4,8 +4,8 @@
 #include <DallasTemperature.h>
 
 
-// Define NodeMCU D4 pin to as temperature data pin of  DHT11
-#define ONE_WIRE_BUS 2
+// Define NodeMCU D5 pin to as temperature data pin of  DHT11
+#define ONE_WIRE_BUS 14
 
 
 // Setup a oneWire instance to communicate with any OneWire devices 
