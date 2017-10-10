@@ -82,13 +82,14 @@ void setup() {
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   sensors.begin();  
-}
+//}
 
-void loop() {
+//void loop() {
   if (!client.connected()) {
     reconnect();
   }
   client.loop();
+ // for (int i=0; i<10;i++){
   long now = millis();
   // read temperature (ds18b20) sensor every 6 seconds
   if (now - lastMsg > 6000) {
@@ -101,6 +102,7 @@ void loop() {
      msg = msg+"C";
      //String msg= data+"C";
      Serial.println(msg);
+     // }
      
      char message[58];
      msg.toCharArray(message,58);
